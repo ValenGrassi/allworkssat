@@ -13,6 +13,7 @@
 
 body{
     background-color: #0c0b05;
+    overflow-x: hidden;
 }
 
 .portada{
@@ -24,7 +25,7 @@ body{
 h1{
     text-align: center;
     font-family: Archivo;
-    font-size: clamp(3rem,3vw + 0.4rem, 6rem);
+    font-size: clamp(2.5rem,3vw + 0.4rem, 6rem);
     font-weight: bold;
     color: #fffdfe;
     margin: 0;
@@ -32,7 +33,7 @@ h1{
 
 h2{
     font-family: Archivo;
-    font-size: clamp(2rem,1.8vw + 0.1rem, 4rem);
+    font-size: clamp(1.5rem,1.8vw + 0.1rem, 4rem);
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -123,9 +124,9 @@ h4{
 }
 
 .img1,.img2{
-    width: 30vw;
-    height: 50vh;
-    object-fit:cover;
+    width: 100%;
+    height: clamp(20rem,28vw + 1rem,30rem);
+    object-fit: cover;
 }
 
 .items{
@@ -188,6 +189,23 @@ a{
     text-align: left;
     color: rgba(255, 253, 254, 0.8);
 }
+
+.images{
+    margin: 2rem 0 2rem 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.img1{
+    object-fit: cover;
+    object-position: left;
+}
+
+.img2{
+    object-fit: cover;
+    object-position: bottom;
+}
+
 
 /* MODO CLARO */
 
@@ -273,6 +291,9 @@ a{
     .images{
         margin-top: 30px;
         margin-bottom: 10vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-right: 10vw;
     }
     
     .img2{
