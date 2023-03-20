@@ -1,0 +1,921 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+:root{
+    --brightMode: #000201;
+}
+
+*{
+    margin: 0;
+    border: 0;
+    /* border: 2px solid white; */
+}
+
+body{
+    background-color: #0c0b05;
+    overflow-x: hidden;
+}
+
+.portada{
+    min-height: 80vh;
+    display: grid;
+    place-content: center;
+}
+
+h1{
+    text-align: center;
+    font-family: Archivo;
+    font-size: clamp(2.5rem,3vw + 0.4rem, 6rem);
+    font-weight: bold;
+    color: #fffdfe;
+    margin: 0;
+}
+
+h2{
+    font-family: Archivo;
+    font-size: clamp(1.5rem,1.8vw + 0.1rem, 4rem);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: #fff;
+    margin: 7px 0 0 0;
+}
+
+#divFlecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.js{
+    transition: all 2s;
+}
+
+.flecha{
+    width: 9px;
+    height: 33px;
+    border-radius: 6px;
+    background-color: white;
+    margin: 4px;
+    animation: move 1.1s infinite ease-in-out;
+}
+
+.flecha:nth-of-type(1){
+    transform: rotate(-45deg);
+}
+
+.flecha:nth-of-type(2){
+    transform: rotate(45deg);
+}
+
+@keyframes move{
+    0%{margin-top: 0;}
+    50%{margin-top: 70px;}
+    100%{margin-top: 0;}
+}
+
+.portada{
+    min-height: 85vh;
+}
+
+.sun{
+    width: 24px;
+    height: 24px;
+    flex-grow: 0;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.mode{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+h3{
+    font-family: Archivo;
+    font-size: clamp(1.2rem, 1.5vw + 0.2rem, 1.7rem);
+    font-weight: bold;
+    text-align: left;
+    color: #fffdfe;
+    padding-top: 30px;
+}
+
+h4{
+    margin-top: 2.5px;
+    margin-left: 10px;
+    font-family: 'Archivo';
+    font-size: clamp(1rem, 2vw + 0.1rem, 1.2rem);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    text-align: left;
+    color: #fffdfe;
+}
+
+.pantalla2{
+    min-height: 100vh;
+    padding: 0 20px 0 20px;
+}
+
+.img1,.img2{
+    width: 22vw;
+    height: clamp(20rem,28vw + 1rem,30rem);
+    object-fit: cover;
+}
+
+
+.items{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.items span{
+    font-family: Archivo;
+    font-size: clamp(0.85rem, 3vw + .1rem, 1.4rem);
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.4);
+    white-space: nowrap; 
+
+}
+
+a{
+    text-decoration: none;
+    color:rgba(255, 253, 254, 0.4);
+    ;
+}
+
+.active{
+    color: #fffdfe !important;
+    cursor: context-menu;
+}
+
+.no-estatico{
+    width: 100%;
+    color: white;
+}
+
+.no-estatico h3{
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 900;
+    font-size: clamp(2rem,1rem + 2vw,4rem);
+    justify-content: center;
+    display: flex;
+}
+
+.no-estatico p{
+    font-family: "Space Grotesk";
+    font-size: clamp(1rem, 1.1vw + 0.1rem, 2rem);
+    font-weight: 500;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.8);
+    margin-top: 1rem;
+}
+
+.images{
+    margin: 2rem 0 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.img1{
+    object-fit: cover;
+    object-position: left;
+    width: 100%;
+    height: 40vw;
+}
+
+.img2{
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    height: 40vw;
+}
+
+.subtitulo{
+    font-family: "Space Grotesk";
+    font-size: clamp(1rem, 1.1vw + 0.4rem, 2rem);;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.8);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.etapa1{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.etapa1 img{
+    height: 12rem;
+    width: 40vw;
+    margin: auto;
+    margin-right: 2rem;
+}
+
+.etapa1 div{
+    margin: auto 0 auto 0;
+}
+
+.etapa1 span{
+    font-family: "Space Grotesk";
+    font-size: .9rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.6);
+}
+
+.etapa1 p{
+    font-family: "Space Grotesk";
+    font-size: .7rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.8);
+}
+
+.etapa3{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.etapa3 img{
+    height: 12rem;
+    width: 40vw;
+    margin: auto;
+    margin-right: 2rem;
+}
+
+.etapa3 div{
+    margin: auto 0 auto 0;
+}
+
+.etapa3 span{
+    font-family: "Space Grotesk";
+    font-size: .9rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.6);
+}
+
+.etapa3 p{
+    font-family: "Space Grotesk";
+    font-size: .7rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.8);
+}
+
+.etapa2{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: #000;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem
+}
+
+.etapa2 img{
+    height: 12rem;
+    margin: auto;
+    width: 40vw;
+    margin-left: 1.5rem;
+    margin-right: 0
+}
+
+.etapa2 div{
+    margin: auto 0 auto 1rem;
+    
+}
+
+.etapa2 span{
+    font-family: "Space Grotesk";
+    font-size: .9rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.6);
+}
+
+.etapa2 p{
+    font-family: "Space Grotesk";
+    font-size: .7rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.8);
+}
+
+.empresas{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cinemark{
+    width: 15vw;
+}
+
+.cinepolis{
+    width: 15vw;
+}
+
+.multiplex{
+    width: 15vw;
+}
+
+.atlas{
+    width: 15vw;
+}
+
+.showcase{
+    width: 15vw;
+
+}
+
+.divAntenas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2.5rem;
+    place-content: center;
+}
+
+.antena{
+    width: 90%;
+    object-fit: cover;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.antena:hover{
+    transition: all .5s;
+    filter: brightness(0.6);
+}
+
+
+
+.hidden{
+    visibility: hidden;
+    z-index: 90;
+    position: absolute;
+    bottom: 4.2rem;
+    left: 1.1rem;
+    font-family: "Space Grotesk";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: #fffcf5;
+}
+
+.hidden2{
+    visibility: hidden;
+    z-index: 90;
+    position: absolute;
+    bottom: 2.7rem;
+    left: 1.1rem;
+    font-family: "Space Grotesk";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: rgba(255, 252, 245, 0.7);
+}
+
+.antenaDiv{
+    position: relative;
+    display: flex;
+}
+
+.antenaDiv:hover .hidden{
+    visibility: visible;
+    transition: all .5s;
+}
+
+.form{
+    margin-top: 1rem;
+    display: grid;
+    place-content: center;
+}
+
+
+.antenaDiv:hover .hidden2{
+    visibility: visible;
+    transition: all .5s;
+}
+
+.contenido{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: auto;
+}
+
+.contenido2{
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+}
+
+.contenido2 .contenido{
+    width: 100%;
+}
+
+input{
+    background-color: #f1ece6;
+    height: 1.1vw;
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: #000201;
+    padding: 1rem;
+}
+
+textarea{
+    background-color: #f1ece6;
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: #000201;
+    padding: 1rem;
+    resize: none;
+    width: 90% !important;
+    padding: 1rem;
+    height: 15vw !important;
+}
+
+
+select{
+    height: 2.95vw;
+    padding: 1rem;
+    background-color: #f1ece6;
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: #000201;
+}
+
+input:focus{
+    border: solid 1px #d3902a;
+}
+
+#enviar{
+    padding: 1rem;
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: #000201;
+    width: 10rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+
+label{
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: #fffdfe;
+    margin-bottom: .2rem;
+}
+
+.pyr{
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr 1fr));
+    width: 90vw;
+    gap: 2.5rem;
+}
+
+.pyr h4{
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: #fffdfe;
+    margin-left: 0;
+}
+
+.pyr p{
+    font-family: "Space Grotesk";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.25px;
+    text-align: left;
+    color: rgba(255, 253, 254, 0.6);  
+}
+/* MODO CLARO */
+
+.bright{
+    background-color: #f8f4f0;
+}
+
+.bright h1{
+    color: var(--brightMode);
+}
+
+.bright h2{
+    color: var(--brightMode);
+}
+
+.bright h3{
+    color: var(--brightMode)
+}
+
+.bright .flecha{
+    background-color: var(--brightMode);
+}
+
+.bright h4{
+    color: var(--brightMode);
+}
+
+.bright .sun{
+    filter: invert(0);
+}
+
+.bright .items a{
+    color: rgba(0, 2, 1, 0.4);
+}
+
+.bright .active{
+    color: var(--brightMode) !important;
+}
+
+.bright .no-estatico p{
+    color: rgba(0, 2, 1, 0.6);
+}
+
+.bright .cinemark{
+    filter: invert(1);
+}
+
+.bright .subtitulo{
+    color: rgba(0, 2, 1, 0.6);
+}
+
+.bright label{
+    color: #000201;
+}
+
+.bright #enviar{
+    background-color: #000201;
+    color: #f8f4f0;
+}
+
+.bright .etapa2{
+    background-color: #fff;
+}
+
+.bright .etapa1 span{
+    color: rgba(0, 2, 1, 0.6);
+}
+.bright .etapa2 span{
+    color: rgba(0, 2, 1, 0.6);
+}
+.bright .etapa3 span{
+    color: rgba(0, 2, 1, 0.6);
+}
+
+
+@media (min-width: 700px) {
+    .items{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 24px;
+        height: 75vh;
+        top: 20%;
+        padding-right: 250px;
+    }
+
+    .items span{
+        width: 8vw;
+    }
+    
+    .flexbox{
+        display: flex;
+    }    
+    
+    .no-estatico h3{
+        line-height: 56px;
+        padding: 0;
+        display: block;
+    }
+
+
+    .no-estatico p{
+        max-width: 33vw;
+    }
+    
+    .title{
+        margin-bottom: 100px;
+    }
+    
+    .estatico{
+        position: sticky;
+        top: 0;
+    }
+    
+    .images{
+        margin-top: 30px;
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 45vw;
+    }
+
+    
+    .img1{
+        width: 22vw;
+        height: clamp(20rem,28vw + 1rem,30rem);
+        object-fit: cover;
+    }
+    
+    .img2{
+        width: 22vw;
+        height: clamp(20rem,28vw + 1rem,30rem);
+        object-fit: cover;
+    }
+
+    .subtitulo{
+        display: inline;
+    }
+
+    .etapa1 span{
+        font-size: clamp(1.1rem, 1vw + 0.3rem, 9rem);
+    }
+
+    .etapa1 p{
+        font-size: clamp(1rem, 0.8vw + 0.3rem, 9rem);
+    }
+
+    .etapa1 img{
+        margin: auto 5rem auto 2.5rem ;
+        width: 13rem;
+        height: 22vh;
+        margin-right: 2rem;
+    }
+    
+    .etapa3 span{
+        font-size: clamp(1.1rem, 1vw + 0.3rem, 9rem);
+    }
+
+    .etapa3 p{
+        font-size: clamp(1rem, 0.8vw + 0.3rem, 9rem);
+    }
+
+    .etapa3 img{
+        margin: auto 2rem auto 2.5rem ;
+        width: 13rem;
+        height: 22vh;
+        margin-right: 2rem;
+    }
+
+    .etapa2 span{
+        font-size: clamp(1.1rem, 1vw + 0.3rem, 9rem);
+    }
+
+    .etapa2 p{
+        font-size: clamp(1rem, 0.8vw + 0.3rem, 9rem);
+    }
+
+    .etapa2 img{
+        width: 13rem;
+        height: 22vh;
+    }
+
+    .etapa2{
+        display: flex;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        background-color: #000;
+        width: 50vw;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .etapa2 div{
+        margin: auto 0 auto 2.5rem;
+    }
+    
+    .cinemark{
+        width: 9vw;
+    }
+    
+    .cinepolis{
+        width: 9vw;
+    }
+    
+    .multiplex{
+        width: 9vw;
+    }
+    
+    .atlas{
+        width: 9vw;
+    }
+    
+    .showcase{
+        width: 11vw;
+    }
+
+    .empresas{
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 2.5rem;
+    }
+
+    .divAntenas{
+        place-content: none;
+        margin: 0;
+        margin-top: 2.5rem;
+        width: 64vw;
+    }
+
+    .antena{
+        height: 14vw;
+        width: 20vw;
+        object-fit:cover;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .form{
+        margin-top: 3.5rem;
+        display: block;
+        place-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    textarea{
+        width: 95% !important;
+    }
+
+    .contenido{
+        margin: 0;
+        width: 50%;
+    }
+
+    .contenido2{
+        width: 50%;
+        margin: 0;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    #enviar{
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .pyr{
+        margin: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: 0.9fr 1fr;
+        width: 50vw;
+        gap: 4rem;
+    }
+    
+    
+
+
+    @media (max-width: 1000px){
+        .images{
+            grid-template-columns: 1fr 1fr;
+        }
+        .img1, .img2{
+            margin: 0;
+        }
+        .etapa1 img{
+            margin: auto;
+            margin-right: 1rem;
+            width: 11rem;
+            height: 20vh;
+        }
+
+        .etapa2 img{
+            margin: auto;
+            margin-right: 1rem;
+            width: 11rem;
+            height: 20vh;
+        }
+        
+        .etapa3 img{
+            margin: auto;
+            margin-right: 1rem;
+            width: 11rem;
+            height: 20vh;
+        }
+
+        .etapa1 p{
+            font-size: .8rem;
+        }
+
+        .etapa1 span{
+            font-size: 1rem;
+        }
+        .etapa2 p{
+            font-size: .8rem;
+        }
+
+        .etapa2 div{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .etapa2 span{
+            font-size: 1rem;
+        }
+        .etapa3 p{
+            font-size: .8rem;
+        }
+
+        .etapa3 span{
+            font-size: 1rem;
+        }
+
+        .etapa2 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-right: .5rem
+        }
+
+        .pyr{
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+    }
+
+}
+
