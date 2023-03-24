@@ -419,6 +419,7 @@ a{
     letter-spacing: -0.25px;
     text-align: left;
     color: #fffcf5;
+    cursor:context-menu;
 }
 
 .hidden2{
@@ -572,7 +573,23 @@ label{
     text-align: left;
     color: rgba(255, 253, 254, 0.6);  
 }
+
 /* MODO CLARO */
+#avellaneda{
+    object-position: 0rem -2.9rem; 
+}
+
+#unicenter{
+    object-position: 0 -3rem;
+}
+
+#tortugas{
+    object-position: 0 -4rem;
+}
+
+#puerto{
+    object-position: 0 -4.5rem;
+}
 
 .bright{
     background-color: #f8f4f0;
